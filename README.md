@@ -34,7 +34,7 @@
   
 💻 Below is a video of the application:
   
-![MERN-BookSearchEngine](./images/demo.gif)
+![MERN-Medical Marijuana Ecommerce](./images/demo.gif)
 </br></br></br>
 ## Deployed Application
 </br>
@@ -92,8 +92,6 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 💾 
 
 ### `npm install`
-
-Have a look at my new life in the matrix [here](./src/assets/images/demo.gif).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
