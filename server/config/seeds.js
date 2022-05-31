@@ -44,20 +44,34 @@ db.once('open', async () => {
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: '9lb Hammer',
       category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
+      description: 'Ouch',
+      THC: '20%',
+      CBD: '80%',
+      image: '9lbHammer.jpg',
       price: 3.99,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Medicine Man',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
+        'A joint a day keeps the doctor away',
+      THC: '35%',
+      CBD: '65%',
+      image: 'witchDoctor.jpg',
+      price: 14.99,
+      quantity: 100
+    },
+    {
+      name: 'The Wookie',
+      category: categories[1]._id,
+      description:
+        'RAWRGWAGGGER',
+      THC:'99%',
+      CBD:'1%',
+      image: 'Wook.jpg',
       price: 14.99,
       quantity: 100
     },

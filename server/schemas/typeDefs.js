@@ -10,6 +10,8 @@ const typeDefs = gql`
     _id: ID
     name: String
     description: String
+    THC: String
+    CBD: String
     image: String
     quantity: Int
     price: Float

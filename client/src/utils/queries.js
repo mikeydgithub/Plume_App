@@ -6,6 +6,8 @@ export const QUERY_PRODUCTS = gql`
       _id
       name
       description
+      THC
+      CBD
       price
       quantity
       image

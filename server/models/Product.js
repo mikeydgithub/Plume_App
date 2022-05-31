@@ -11,6 +11,12 @@ const productSchema = new Schema({
   description: {
     type: String
   },
+  THC: {
+    type: String
+  },
+  CBD: {
+    type: String
+  },
   image: {
     type: String
   },
