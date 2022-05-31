@@ -3,17 +3,18 @@
 <h1 align="center"> MERN - Medical Marijuana ECommerce </h1>
   
 <p align="center">
-    <img src="https://img.shields.io/github/repo-size/" />
-    <img src="https://img.shields.io/github/languages/top/"  />
-    <img src="https://img.shields.io/github/issues/" />
-    <img src="https://img.shields.io/github/last-commit/" >
-    <a href="https://github.com/vpham26/MERN-BookSearchEngine"><img src="https://img.shields.io/github/followers/?style=social" target="_blank" /></a>
+    <img src="https://img.shields.io/github/repo-size/mikeydgithub/Pro_Star" />
+    <img src="https://img.shields.io/github/languages/top/mikeydgithub/Pro_Star"  />
+    <img src="https://img.shields.io/github/issues/mikeydgithub/Pro_Star" />
+    <img src="https://img.shields.io/github/last-commit/mikeydgithub/Pro_Star" >
+    <!-- <a href="https://github.com/mikeydgithub/Pro_Star"><img src="https://img.shields.io/github/followers/?style=social" target="_blank" /></a> -->
 </p>
   
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-yellow" />
     <img src="https://img.shields.io/badge/ReactJS-purple" />
-    <img src="https://img.shields.io/badge/BootStrap-orange" />
+    <img src="https://img.shields.io/badge/SaSS-pink" />
+    <img src="https://img.shields.io/badge/MongoDB-green" />
     <!-- <img src="https://img.shields.io/badge/AnimatedCursor-red"  /> -->
 </p>
 
