@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import ThoughtList from '../components/ThoughtList';
+import ThoughtForm from '../components/ThoughtForm';
+import Auth from '../utils/auth';
 
 import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
@@ -17,11 +20,8 @@ import spinner from '../assets/spinner.gif';
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-
   const [currentProduct, setCurrentProduct] = useState({});
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
   const { products, cart } = state;
 
   useEffect(() => {
@@ -106,6 +106,9 @@ function Detail() {
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+
+          <p>THC:{currentProduct.thc}{' '}</p>
+          
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}

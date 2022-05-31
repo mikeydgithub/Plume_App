@@ -14,6 +14,7 @@ const typeDefs = gql`
     quantity: Int
     price: Float
     category: Category
+    thc: String
   }
 
   type Order {
@@ -28,6 +29,14 @@ const typeDefs = gql`
     lastName: String
     email: String
     orders: [Order]
+    thoughts: [Thought]
+  }
+
+  type Thought {
+    _id: ID
+    thoughtText: String
+    createdAt: String
+    username: String
   }
 
   type Checkout {

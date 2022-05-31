@@ -1,13 +1,15 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order } = require('../models');
+const { User, Product, Category, Order, Thought } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
+    // categories
     categories: async () => {
       return await Category.find();
     },
+    // products
     products: async (parent, { category, name }) => {
       const params = {};
 
@@ -23,9 +25,11 @@ const resolvers = {
 
       return await Product.find(params).populate('category');
     },
+    // product
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
+    // user
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -40,6 +44,22 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // user for thoughts
+    user: async (parent, { username }) => {
+      return User.findOne({ username })
+        .select('-__v -password')
+        .populate('thoughts');
+    },
+    // thoughts
+    thoughts: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Thought.find(params).sort({ createdAt: -1 });
+    },
+    // thought
+    thought: async (parent, { _id }) => {
+      return Thought.findOne({ _id });
+    },
+    // order
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -52,6 +72,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // checkout
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
@@ -77,7 +98,7 @@ const resolvers = {
           quantity: 1
         });
       }
-
+      // session
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items,
@@ -87,15 +108,18 @@ const resolvers = {
       });
 
       return { session: session.id };
-    }
+    },
   },
+
   Mutation: {
+    // add user
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
 
       return { token, user };
     },
+    // add order
     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
@@ -108,6 +132,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // update user
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });
@@ -115,11 +140,13 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // update product
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
       return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
+    // login
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

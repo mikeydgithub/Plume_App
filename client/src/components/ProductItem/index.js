@@ -13,7 +13,8 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    quantity
+    quantity,
+    thc
   } = item;
 
   const { cart } = state
@@ -51,6 +52,7 @@ function ProductItem(item) {
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
+        <span>{thc}</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>
