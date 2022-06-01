@@ -20,7 +20,7 @@ db.once('open', async () => {
       name: 'Chocolate Bars',
       description:
         'Delicious homemade chocolate.',
-      image: 'cookie-tin.jpg',
+      image: 'Chocolate-Bars.jpg',
       category: categories[0]._id,
       thc: '22%',
        CBD: '15%',
@@ -31,7 +31,7 @@ db.once('open', async () => {
       name: 'Brownies',
       description:
         'Delicious homemade brownies.',
-      image: 'cookie-tin.jpg',
+      image: 'Brownies-Brownie.jpg',
       category: categories[0]._id,
       thc: '22%',
       // CBD: '15%',
@@ -39,20 +39,20 @@ db.once('open', async () => {
       quantity: 200
     },
     {
-      name: 'Handmade Soap',
+      name: 'Home Cooking',
       category: categories[1]._id,
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
+      image: 'cbd_oil2.jpg',
       price: 3.99,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Grape Soda',
       category: categories[1]._id,
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
+      image: 'cbd_oil1.jpg',
       price: 14.99,
       quantity: 100
     },
