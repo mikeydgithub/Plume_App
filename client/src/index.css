@@ -3,7 +3,7 @@
   --secondary: #F3A847;
   --tertiary: #B12704;
   --light: #fafafa;
-  --dark: #272f32;
+  --dark: white;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -15,6 +15,8 @@
 
 html,
 body {
+  background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+  background-size: cover;
   min-height: 100%;
 }
 
