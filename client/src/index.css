@@ -85,6 +85,13 @@ header {
   background: var(--primary);
 }
 
+.navsticky{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header a {
   color: var(--light);
 }
@@ -393,3 +400,19 @@ input:focus {
     border-bottom: 1px solid #444;
   }
 }
+
+/* Products image size */
+.imgProducts{
+  height: 200px;
+  width: 200px;
+}
+
+/*Cart button location for smaller resolution */
+@media only screen and (max-width: 771px) {
+  .cart {
+    padding: 50px;
+  }
+}
+
+
+

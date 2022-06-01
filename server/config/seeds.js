@@ -8,7 +8,6 @@ db.once('open', async () => {
     { name: 'Edibles' },
     { name: 'Flower' },
     { name: 'Vape Pens' },
-    { name: 'Concentrate' }
   ]);
 
   console.log('categories seeded');
@@ -17,7 +16,7 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Chocolate Bars',
+      name: 'Chocolate Bars 100mg',
       description:
         'Delicious homemade chocolate.',
       image: 'Chocolate-Bars.jpg',
@@ -28,18 +27,16 @@ db.once('open', async () => {
       quantity: 200
     },
     {
-      name: 'Brownies',
+      name: 'Brownies 100mg',
       description:
         'Delicious homemade brownies.',
       image: 'Brownies-Brownie.jpg',
       category: categories[0]._id,
-      thc: '22%',
-      // CBD: '15%',
       price: 15.99,
       quantity: 200
     },
     {
-      name: 'Home Cooking',
+      name: 'CBD OIL 50%',
       category: categories[1]._id,
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
@@ -48,7 +45,7 @@ db.once('open', async () => {
       quantity: 50
     },
     {
-      name: 'Grape Soda',
+      name: 'CBD OIL 75%',
       category: categories[1]._id,
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
@@ -57,21 +54,21 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: 'Vape Pen Miami Splice',
+      name: 'Vape Pen Miami Splice 90%',
       category: categories[2]._id,
       description:
         'Get retro Miami vibes.',
-      image: 'camera.jpg',
-      price: 399.99,
+      image: 'vape1.jpg',
+      price: 49.99,
       quantity: 30
     },
     {
-      name: 'Vape Pen Bubble Bath',
+      name: 'Vape Pen Bubble Bath 85%',
       category: categories[2]._id,
       description:
         'Time to take a bath and add some bubbles. You will need it!',
-      image: 'tablet.jpg',
-      price: 199.99,
+      image: 'vape2.jpg',
+      price: 49.99,
       quantity: 30
     },
   ]);
