@@ -5,7 +5,8 @@
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  /* background-color: var(--light); */
+  background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg;
   overflow: auto;
   padding: .5rem;
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
