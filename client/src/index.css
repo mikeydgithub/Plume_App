@@ -90,6 +90,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 46px;
+  padding-bottom: 40px;
 }
 
 header a {
