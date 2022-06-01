@@ -45,7 +45,19 @@ function CategoryMenu() {
   return (
     <div>
       <h2>Choose a Category:</h2>
-      {categories.map((item) => (
+       {/* Regular Buttons */}
+      <div>{categories.map((item) => (
+        <button class="glow-on-hover"
+          key={item._id}
+          onClick={() => {
+            handleClick(item._id);
+          }}
+        >
+          {item.name}
+        </button>
+      ))}</div>
+      {/* Hamburger Menu Below */}
+      <div>{categories.map((item) => (
         <button
           key={item._id}
           onClick={() => {
@@ -54,7 +66,7 @@ function CategoryMenu() {
         >
           {item.name}
         </button>
-      ))}
+      ))}</div>
     </div>
   );
 }
