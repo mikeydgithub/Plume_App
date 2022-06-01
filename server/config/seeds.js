@@ -28,7 +28,7 @@ db.once('open', async () => {
     {
       name: 'Gummies',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+        'Declicious sour gummy worms filled with classic flavors such as cherry, blueberry, and strawberry',
       image: 'canned-coffee.jpg',
       category: categories[0]._id,
       price: 1.99,
@@ -38,7 +38,7 @@ db.once('open', async () => {
       name: 'Chocolate Brownies',
       category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+        'Chocolate Brownies that are always a treat to eat. ',
       image: 'toilet-paper.jpg',
       price: 7.99,
       quantity: 20
