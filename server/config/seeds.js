@@ -5,11 +5,10 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Edibles' },
+    { name: 'Flower' },
+    { name: 'Vape Pens' },
+    { name: 'Concentrate' }
   ]);
 
   console.log('categories seeded');
@@ -18,16 +17,16 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Chocolate Bars',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        'Delicious homemade chocolate.',
       image: 'cookie-tin.jpg',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Gummies',
       description:
         'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
       image: 'canned-coffee.jpg',
@@ -36,8 +35,8 @@ db.once('open', async () => {
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'Chocolate Brownies',
+      category: categories[0]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
       image: 'toilet-paper.jpg',
@@ -89,41 +88,41 @@ db.once('open', async () => {
       price: 9.99,
       quantity: 100
     },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
+    // {
+    //   name: 'Spinning Top',
+    //   category: categories[4]._id,
+    //   description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
+    //   image: 'spinning-top.jpg',
+    //   price: 1.99,
+    //   quantity: 1000
+    // },
+    // {
+    //   name: 'Set of Plastic Horses',
+    //   category: categories[4]._id,
+    //   description:
+    //     'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
+    //   image: 'plastic-horses.jpg',
+    //   price: 2.99,
+    //   quantity: 1000
+    // },
+    // {
+    //   name: 'Teddy Bear',
+    //   category: categories[4]._id,
+    //   description:
+    //     'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
+    //   image: 'teddy-bear.jpg',
+    //   price: 7.99,
+    //   quantity: 100
+    // },
+    // {
+    //   name: 'Alphabet Blocks',
+    //   category: categories[4]._id,
+    //   description:
+    //     'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
+    //   image: 'alphabet-blocks.jpg',
+    //   price: 9.99,
+    //   quantity: 600
+    // }
   ]);
 
   console.log('products seeded');
