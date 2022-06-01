@@ -32,12 +32,6 @@ const typeDefs = gql`
     thoughts: [Thought]
   }
 
-  type Thought {
-    _id: ID
-    thoughtText: String
-    createdAt: String
-    username: String
-  }
 
   type Checkout {
     session: ID

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order, Thought } = require('../models');
+const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -43,21 +43,6 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
-    },
-    // user for thoughts
-    user: async (parent, { username }) => {
-      return User.findOne({ username })
-        .select('-__v -password')
-        .populate('thoughts');
-    },
-    // thoughts
-    thoughts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
-    },
-    // thought
-    thought: async (parent, { _id }) => {
-      return Thought.findOne({ _id });
     },
     // order
     order: async (parent, { _id }, context) => {
