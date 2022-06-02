@@ -15,7 +15,7 @@ function Jumbotron({ children }) {
         </span>
         <span className="text">
           <h3>
-            Pharmaceutical <span>
+            Pharmaceutical <span className="text2">
             <TypewriterComponent
             options={{
             strings:["Edibles", "Oils", "Vape Pens"],
