@@ -48,10 +48,11 @@ function Nav() {
           Ploom💨
         </Link>
       </h1>
-
+      <div>
       <nav>
         {showNavigation()}
       </nav>
+      </div>
     </header>
   );
 }
