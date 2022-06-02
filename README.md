@@ -35,7 +35,8 @@
   
 💻 Below is a video of the application:
   
-![MERN-Pharmacetical CBD Ecommerce](./images/demo.gif)
+ ![GIF](./images/demo.gif)
+
 </br></br></br>
 ## Deployed Application
 </br>
