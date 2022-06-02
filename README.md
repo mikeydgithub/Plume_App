@@ -40,7 +40,7 @@
 ## Deployed Application
 </br>
 
-🔍 Deployed with [Heroku](https://ploom-app.herokuapp.com/)
+🔍 Deployed with [Heroku](https://plume-appv2.herokuapp.com/)
 
 </br>
 
