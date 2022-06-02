@@ -1,4 +1,4 @@
-# Pro_Star
+# Plume App
 
 <h1 align="center"> MERN - Pharmaceutical CBD ECommerce </h1>
   
