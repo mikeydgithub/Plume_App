@@ -22,7 +22,7 @@ db.once('open', async () => {
       image: 'Chocolate-Bars.jpg',
       category: categories[0]._id,
       thc: '22%',
-       CBD: '15%',
+      CBD: '15%',
       price: 15.99,
       quantity: 200
     },

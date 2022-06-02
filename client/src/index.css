@@ -90,8 +90,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 46px;
-  padding-bottom: 40px;
+  height: 50px;
+  
 }
 
 header a {
@@ -409,12 +409,6 @@ input:focus {
   width: 200px;
 }
 
-/*Cart button location for smaller resolution */
-@media only screen and (max-width: 771px) {
-  .cart {
-    padding: 50px;
-  }
-}
 
 
 
