@@ -43,31 +43,42 @@ function CategoryMenu() {
   };
 
   return (
+    // <div>
+    //   <h2>Choose a Category:</h2>
+    //    {/* Regular Buttons */}
+    //   <div>{categories.map((item) => (
+    //     <button class="glow-on-hover"
+    //       key={item._id}
+    //       onClick={() => {
+    //         handleClick(item._id);
+    //       }}
+    //     >
+    //       {item.name}
+    //     </button>
+    //   ))}</div>
+
+    <section class="top-nav">
     <div>
-      <h2>Choose a Category:</h2>
-       {/* Regular Buttons */}
-      <div>{categories.map((item) => (
-        <button class="glow-on-hover"
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}</div>
-      {/* Hamburger Menu Below */}
-      <div>{categories.map((item) => (
-        <button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}</div>
+      <h2>Categories:</h2>
     </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+      <li>
+        <div>
+          {categories.map((item) => (
+            <button class="glow-on-hover" key={item._id} onClick={() => {handleClick(item._id);}}> {item.name}</button>
+          ))}
+        </div>
+    </li>
+    </ul>
+    </section>
+  
+      
+     
+   
   );
 }
 
