@@ -1,6 +1,6 @@
 # Pro_Star
 
-<h1 align="center"> MERN - Medical Marijuana ECommerce </h1>
+<h1 align="center"> MERN - Pharmaceutical CBD ECommerce </h1>
   
 <p align="center">
     <img src="https://img.shields.io/github/repo-size/mikeydgithub/Pro_Star" />
