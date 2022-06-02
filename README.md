@@ -35,12 +35,12 @@
   
 💻 Below is a video of the application:
   
-![MERN-Medical Marijuana Ecommerce](./images/demo.gif)
+![MERN-Pharmacetical CBD Ecommerce](./images/demo.gif)
 </br></br></br>
 ## Deployed Application
 </br>
 
-🔍 Deployed with [Heroku]()
+🔍 Deployed with [Heroku](https://ploom-app.herokuapp.com/)
 
 </br>
 
@@ -100,7 +100,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run develop`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
