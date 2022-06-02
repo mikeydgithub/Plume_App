@@ -49,7 +49,7 @@
 </br>
 
 ```
-AS A person that needs to look for a great medical marijuana dispensery
+AS A person that needs to look for a great CBD store
 I WANT to search for great products 
 SO THAT I can get the best products on the market
 ```
