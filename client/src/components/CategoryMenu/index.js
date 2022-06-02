@@ -60,7 +60,6 @@ function CategoryMenu() {
     <section class="top-nav">
     <div>
       <h2>Categories:</h2>
-    </div>
     <input id="menu-toggle" type="checkbox" />
     <label class='menu-button-container' for="menu-toggle">
     <div class='menu-button'></div>
@@ -70,10 +69,11 @@ function CategoryMenu() {
         <div>
           {categories.map((item) => (
             <button class="glow-on-hover" key={item._id} onClick={() => {handleClick(item._id);}}> {item.name}</button>
-          ))}
+            ))}
         </div>
     </li>
     </ul>
+            </div>
     </section>
   
       

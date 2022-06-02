@@ -76,7 +76,7 @@
 html,
 body {
   background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
-  background-size: cover;
+  background-size: flex;
   min-height: 100%;
 }
 
@@ -212,12 +212,12 @@ header a {
 button {
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  border: 2rem;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin: 2px 2px 2px;
   background-color: var(--secondary);
 }
 
