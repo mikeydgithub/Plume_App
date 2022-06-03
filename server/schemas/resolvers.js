@@ -53,9 +53,13 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
     checkout: async (parent, args, context) => {
-      const url = new URL(context.headers.referer).origin;
+      let url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
       const line_items = [];
+      
+      console.log('context_headers', context.headers)
+      console.log('hamzah is the coolest', url)
+      
 
       const { products } = await order.populate('products');
 
@@ -78,6 +82,7 @@ const resolvers = {
         });
       }
 
+      let urlRep = url.replace(/http/, "https")
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items,
@@ -85,6 +90,8 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
+      console.log(url)
+      console.log("urlRep", urlRep)
 
       return { session: session.id };
     }
@@ -97,7 +104,6 @@ const resolvers = {
       return { token, user };
     },
     addOrder: async (parent, { products }, context) => {
-      console.log(context);
       if (context.user) {
         const order = new Order({ products });
 
